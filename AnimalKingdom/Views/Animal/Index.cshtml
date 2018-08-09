@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Animal>
+
+
+    @foreach (var animal in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <img src ="@animal.ImageThumbnailUrl" alt=""/>
+                <div class="caption">
+                    <a asp-controller="Animal" asp-action="AnimalPage" asp-route-id="@animal.Id">@animal.Name</a>
+                    <h3>@animal.Id</h3>
+                </div>
+            </div>
+        </div>
+    }
